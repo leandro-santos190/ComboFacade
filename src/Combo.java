@@ -4,9 +4,7 @@ public class Combo {
     Sobremesa s = new Sobremesa();
     Bebida bb = new Bebida();
 
-
-
-
+    
     public void CriarCombo(int tipo){
 
         if(tipo==1){
@@ -19,7 +17,8 @@ public class Combo {
             bb.setDescricao("Suco de Laranja");
             bb.setPreco(10);
             bb.setMl(450);
-        }else{
+        }
+        if(tipo==2){
             b.setDescricao("550 gramas de Hamburger");
             b.setPreco(55);
             b.setGramas(550);
@@ -31,13 +30,18 @@ public class Combo {
             bb.setMl(1000);
 
         }
-
-        System.out.println("Sua escolha foi :\nBurger: "+ b.getDescricao()+"\nPreco: "+b.getPreco()+"\nGramas: "+b.getGramas() + "\n\nSobremesa:"+s.getDescricao()+"\nPreço: "+s.getPreco()+"\nTamanho: "+s.getTamanho()+"\n\nBebida: "+bb.getDescricao()+"\nPreço: "+bb.getPreco()+"\nML: "+bb.getMl());
-
     }
-
-
-
-
-
+        
+        @Override
+        public String toString(){
+        	return "Sua escolha foi :\nBurger: "+ b.getDescricao()
+        	+"\nPreco: "+b.getPreco()
+        	+"\nGramas: "+b.getGramas()
+        	+ "\n\nSobremesa:"+s.getDescricao()
+        	+"\nPreço: "+s.getPreco()
+        	+"\nTamanho: "+s.getTamanho()
+        	+"\n\nBebida: "+bb.getDescricao()
+        	+"\nPreço: "+bb.getPreco()
+        	+"\nML: "+bb.getMl();
+        }
 }

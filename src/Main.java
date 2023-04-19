@@ -19,7 +19,7 @@ public class Main {
 
         combo.CriarCombo(tipo);
 
-        System.out.println(combo);
+        System.out.println(combo.toString());
 
     }
 
